@@ -34,6 +34,7 @@ public class Board extends JPanel implements GameConstants{
 			repaint();
 			
 		});
+		timer.start();
 	}
 	
 	@Override

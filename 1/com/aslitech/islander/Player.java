@@ -100,16 +100,18 @@ public class Player extends Sprite implements PlayerState{
 		// TODO Auto-generated method stub
 		
 		if(standIndex>=standImageArray.length-1) {
+			//System.out.println("this runs 1");
 			g.drawImage(standImageArray[standImageArray.length-1], x, FLOOR-height	,width,height, null);
 		}
-		else {
+		else if (standIndex<standImageArray.length-1){
+			//System.out.println("this runs 2");
 			g.drawImage(standImageArray[standIndex], x, FLOOR-height,width,height, null);
 
-			//standDelayer++;
-			//if(standDelayer==4) {
+			standDelayer++;
+			if(standDelayer==4) {
 				standIndex++;
-			//	standDelayer=0;
-			//}
+				standDelayer=0;
+			}
 			
 		//for(int s)
 		
